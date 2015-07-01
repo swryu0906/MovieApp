@@ -20,6 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# Before Heroku deployment
+#	production:
+#	  <<: *default
+#	  database: db/production.sqlite3
+
+# Using postgresql adapter for Heroku deployment
 production:
   <<: *default
+  adapter: postgresql
   database: db/production.sqlite3
